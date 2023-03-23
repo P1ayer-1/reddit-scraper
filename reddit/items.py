@@ -12,11 +12,11 @@ def clean_post_content(value):
 
 class RedditItem(Item):
     title = Field()
-    link = Field()
-    score = Field()
+    over_18 = Field()
+    post_score = Field()
+    upvote_percentage = Field()
     post_content = Field(
         input_processor=MapCompose(str.strip),
         output_processor=Compose(Join(), clean_post_content)
     )
-    is_nsfw = Field()
     comments = Field()

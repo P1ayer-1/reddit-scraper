@@ -21,13 +21,13 @@ ROBOTSTXT_OBEY = False
 
 COOKIES_ENABLED = True
 FEED_FORMAT = "json"
-FEED_URI = "output3.json"
-FEED_EXPORT_FIELDS = ['title', 'link', 'score', 'is_nsfw', 'post_content', 'comments']
+FEED_URI = "outputs/reddit.json"
+FEED_EXPORT_FIELDS = ['title', 'link', 'post_score', 'upvote_percentage', 'is_nsfw', 'post_content', 'comments']
 
-DOWNLOADER_MIDDLEWARES = { 
-    'reddit.middlewares.CustomProxyMiddleware': 350, 
-    'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 400, 
-}
+# DOWNLOADER_MIDDLEWARES = { 
+#     'reddit.middlewares.CustomProxyMiddleware': 350, 
+#     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 400, 
+# }
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
